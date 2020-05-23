@@ -4,6 +4,8 @@ package main
 import (
 	"fmt"
 	"strings"
+	//golang中的unicode/utf8包提供了用utf-8获取长度的方法
+	"unicode/utf8"
 )
 
 func main() {
@@ -53,4 +55,14 @@ func main() {
 	// 拼接 strings.Join 方法 strings.Join(变量,"符号")
 	//s7 := "abcd"
 	fmt.Println(strings.Join(sp_1, "+"))
+	// rune ；类型
+	ch_1 := "你好，中国"
+	fmt.Println(len(ch_1))
+	fmt.Printf("%T", ch_1)
+	//golang中的unicode/utf8包提供了用utf-8获取长度的方法
+	fmt.Printf("runeCountString:%T\n", utf8.RuneCountInString(ch_1))
+	fmt.Println(utf8.RuneCountInString(ch_1))
+	//通过rune类型处理unicode字符  []rune
+	fmt.Printf("runeCount:%T\n", len([]rune(ch_1)))
+	fmt.Println(len([]rune(ch_1)))
 }
