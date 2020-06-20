@@ -59,7 +59,9 @@ func main() {
 	fmt.Println("请输入一个字符串：")
 	// bufio NewReader(os.Stdin)  // 标准输入
 	reader := bufio.NewReader(os.Stdin)
-	// 分隔
+	// 分隔12
 	s3, _ := reader.ReadString('\n')
 	fmt.Printf("读到的数据: %s\n", s3)
+	s4 := "true"
+	fmt.Printf("%T,%v,%s", s4, s4, s4)
 }
