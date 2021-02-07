@@ -4,14 +4,11 @@ import "fmt"
 
 // 数据元素遍历
 func main() {
-	var n [10]int
-
-	for i := 0; i < 10; i++ {
-		n[i] = i + 100
-		fmt.Println(n[i])
-	}
-
-	for j := 0; j < 10; j++ {
-		fmt.Println(n[j])
-	}
+	var arr1 [4]int
+	var arr2 [4]string
+	var arr3 [2]bool
+	fmt.Println(arr1, arr2, arr3)
+	fmt.Printf("%T\n", arr1)
+	fmt.Printf("%T\n", arr2)
+	fmt.Printf("%T\n", arr3)
 }

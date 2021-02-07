@@ -42,14 +42,14 @@ func main() {
 	//)
 
 	// 定义数量级别
-	//const (
-	//	_ = iota
-	//	KB = 1 << (10 * iota)
-	//	MB = 1 << (10 * iota)
-	//	GB = 1 << (10 * iota)
-	//	TB = 1 << (10 * iota)
-	//	PB = 1 << (10 * iota)
-	//)
+	const (
+		_  = iota
+		KB = 1 << (10 * iota)
+		MB = 1 << (10 * iota)
+		GB = 1 << (10 * iota)
+		TB = 1 << (10 * iota)
+		PB = 1 << (10 * iota)
+	)
 
 	// 多个iota定义在一行
 
@@ -62,11 +62,11 @@ func main() {
 		c11, c12                      // 6,7
 	)
 
-	//fmt.Println(KB)
-	//fmt.Println(MB)
-	//fmt.Println(GB)
-	//fmt.Println(TB)
-	//fmt.Println(PB)
+	fmt.Println(KB)
+	fmt.Println(MB)
+	fmt.Println(GB)
+	fmt.Println(TB)
+	fmt.Println(PB)
 	fmt.Println(pi)
 	fmt.Println(e)
 	fmt.Println("c1:", c1)
