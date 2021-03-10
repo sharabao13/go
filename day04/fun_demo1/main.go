@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	/*
@@ -42,6 +44,18 @@ func main() {
 	//调用99乘法表
 	multiNine()
 	fmt.Println("---------------------")
+	sayHi("Tae")
+	sayHi("Bao")
+	sums := addN(1, 2, 5, 2)
+	fmt.Println(sums)
+	sum1 := calc("add", 1, 2, 5, 6)
+	fmt.Println(sum1)
+	nums := []int{1, 2, 5, 6, 10}
+	nums = append(nums[:1], nums[2:]...)
+	fmt.Println(nums)
+	nums1 := []int{1, 3, 5, 7, 9, 11, 13, 22, 33, 55}
+	nums1 = append(nums1[:5], nums1[6:]...)
+	fmt.Println(nums1)
 }
 
 //定义一个1-100的和的函数
@@ -63,4 +77,28 @@ func multiNine() {
 		}
 		fmt.Println()
 	}
+}
+
+func sayHi(name string) {
+	fmt.Println("你好", name)
+}
+
+// 可变参数的类型为 切片类型
+func addN(a, b int, args ...int) int {
+	total := 0
+	total = a + b
+	for _, v := range args {
+		total += v
+	}
+	return total
+
+}
+
+func calc(op string, a, b int, args ...int) int {
+	switch op {
+	case "add":
+		return addN(a, b, args...)
+	}
+	return 0
+
 }
